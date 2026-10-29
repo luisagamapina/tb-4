@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo de Filmes e Séries</title>
+  <link rel="stylesheet" href="estilo.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+
+  <header>
+    <h1>Catálogo de Filmes e Séries</h1>
+  </header>
+
+  <main id="catalogo">
+    <p role="status">Carregando catálogo...</p>
+  </main>
+
+ 
+  <template id="modelo-ficha">
+    <article class="ficha">
+      <span class="ficha__faixa"></span>
+
+      <div class="ficha__topo">
+        <img class="ficha__capa" src="" alt="">
+        <div class="ficha__info">
+          <h2 class="ficha__titulo"></h2>
+          <div class="ficha__meta">
+            <p class="ficha__generos"></p>
+            <span class="ficha__estrelas"></span>
+          </div>
+          <p class="ficha__elenco"><strong>Elenco</strong> <span class="ficha__elenco-nomes"></span></p>
+        </div>
+      </div>
+
+      <p class="ficha__resumo"></p>
+
+      <div class="ficha__similares-bloco">
+        <h3>Títulos similares</h3>
+        <ul class="ficha__similares"></ul>
+      </div>
+
+      <details class="ficha__opinioes">
+        <summary>Opiniões</summary>
+        <ul class="ficha__opinioes-lista"></ul>
+      </details>
+    </article>
+  </template>
+
+</body>
+</html>

@@ -1,0 +1,164 @@
+* {
+     box-sizing: border-box; 
+    }
+
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
+  background: #c5d1db;
+  color: #2b3a4a;
+  line-height: 1.5;
+}
+
+header {
+  padding: 28px 16px 8px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+  font-weight: 800;
+  letter-spacing: .5px;
+}
+
+
+main {
+  width: min(960px, 94%);
+  margin: 24px auto 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+main > p {
+  grid-column: 1 / -1;
+  text-align: center;
+}
+
+
+.ficha {
+  position: relative;
+  background: #fff;
+  padding: 0 14px 14px;
+  box-shadow: 0 2px 8px rgba(43, 58, 74, .15);
+}
+
+.ficha__topo {
+  display: flex;
+  gap: 14px;
+}
+
+.ficha__capa {
+  width: 110px;
+  height: 140px;
+  flex-shrink: 0;
+  object-fit: cover;
+  background: #e1e8ee;
+  margin-left: -14px;
+}
+
+.ficha__info {
+  flex: 1;
+  padding-top: 8px;
+  padding-right: 50px; 
+  min-width: 0;
+}
+
+.ficha__titulo {
+  margin: 0 0 6px;
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.ficha__meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 8px;
+  font-size: .8rem;
+}
+
+.ficha__meta p { margin: 0; }
+
+.ficha__elenco {
+  margin: 6px 0 0;
+  font-size: .8rem;
+}
+
+
+.ficha__faixa {
+  position: absolute;
+  top: 0;
+  right: 0;
+  min-width: 44px;
+  padding: 6px 8px;
+  text-align: center;
+  font-size: .95rem;
+  font-weight: 500;
+}
+
+.faixa--verde { background: #8fd5cd; }
+.faixa--amarelo { background: #fbe18a; }
+.faixa--vermelho { background: #eb9aa8; }
+
+
+.estrelas { white-space: nowrap; letter-spacing: 1px; }
+.estrela.cheia { color: #f5b50a; }
+.estrela.vazia { color: #cfd6dd; }
+
+.ficha__resumo {
+  margin: 12px 0;
+  font-size: .85rem;
+}
+
+.ficha__similares-bloco h3 {
+  margin: 0 0 6px;
+  font-size: .9rem;
+  font-weight: 500;
+}
+
+.ficha__similares {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ficha__similares img {
+  display: block;
+  width: 44px;
+  height: 56px;
+  object-fit: cover;
+  background: #e1e8ee;
+}
+
+.ficha__opinioes {
+  margin-top: 10px;
+  font-size: .8rem;
+}
+
+.ficha__opinioes summary {
+  cursor: pointer;
+  color: #1d4ed8;
+}
+
+.ficha__opinioes-lista {
+  margin: 8px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.ficha__opinioes-lista li {
+  padding: 6px 0;
+  border-top: 1px solid #e5e7eb;
+}
+
+
+@media (max-width: 720px) {
+  main { grid-template-columns: 1fr; }
+}
